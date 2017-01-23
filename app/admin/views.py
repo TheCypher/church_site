@@ -25,3 +25,9 @@ def pages():
 		'title':'Pages'
 	}
 	return render_template('admin/pages.html', page=page)
+
+@mod.route('/logout', methods=['GET'])
+@login_required
+def logout():
+	session['user_id'] = ''
+	return redirect(url_for('front.signin'))
