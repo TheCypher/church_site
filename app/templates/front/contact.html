@@ -1,0 +1,86 @@
+{% extends "front.base.html" %}
+
+{% block body %}
+    <div class="wrapper">
+        <div class="section section-contact-form">
+            <div class="container">
+                    <div class="title-area">
+                        <h5 class="subtitle text-gray">Glad to Talk With You</h5>
+                        <h2>Contact Us</h2>
+                        <div class="separator separator-danger">✻</div>
+                        <p class="description">Lorem ipsum dolor sit amet, consectetuer adipiscing elit. Aenean commodo ligula eget dolor. Aenean massa. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec quam felis, ultricies nec, pellentesque eu, pretium quis, sem. </p>
+                    </div>
+
+                <div class="social-buttons">
+                    <button class="btn btn-social btn-simple"><i class="fa fa-facebook-square"></i></button>
+                    <button class="btn btn-social btn-simple"><i class="fa fa-twitter"></i></button>
+                    <button class="btn btn-social btn-simple"><i class="fa fa-instagram"></i></button>
+                    <button class="btn btn-social btn-simple"><i class="fa fa-google" ></i></button>
+                </div>
+
+                <div class="row">
+                    <div class="col-md-8 col-md-offset-2">
+                        <div class="contact-form">
+                            <form action="" method="post">
+                                <div class="row">
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Your Full Name</label>
+                                            <input type="text" name="name" value="" placeholder="Michael Jordan" class="form-control form-control-plain">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Your Email</label>
+                                            <input type="text" name="email" value="" placeholder="michael.j@gmail.com" class="form-control form-control-plain">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-4">
+                                        <div class="form-group">
+                                            <label>Subject</label>
+                                            <input type="text" name="subject" value="" placeholder="Say hi to you" class="form-control form-control-plain">
+                                        </div>
+                                    </div>
+                                    <div class="col-md-12">
+                                        <div class="form-group">
+                                            <textarea name="content" class="form-control form-control-plain" placeholder="Here you can write your nice text" rows="8"></textarea>
+                                        </div>
+                                        <div>
+                                            <div class="col-md-2 col-md-offset-5">
+                                                <button type="button" class="btn btn-danger btn-fill">
+                                                    Contact Us
+                                                </button>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="section section-contact-us">
+            <div class="contact-container">
+                <div class="address-container ">
+                    <div class="address">
+                        <h4>Where to meet ?</h4>
+                        <p class="text-gray">
+                            1234 Sac<br>
+                            Rue Abel, 12<br>
+                        </p>
+                        <h4>Phone</h4>
+                        <p class="text-gray">0456 / 71 21 39</p>
+                        <h4>By the old way</h4>
+                        <a href="mailto:hello@rcsda.com">
+                            <p class="text-gray">hello@rcsda.com</p>
+                        </a>
+                    </div>
+                </div>
+                <div class="map">
+                    <div data-lat="38.5639585" data-lng="-121.3646482" class="google-map big-map"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}
