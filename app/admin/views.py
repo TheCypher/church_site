@@ -18,13 +18,13 @@ def index():
 	}
 	return render_template('admin/index.html', page=page)
 
-@mod.route('/pages', methods=['GET', 'POST'])
+@mod.route('/website', methods=['GET', 'POST'])
 @login_required
-def pages():
+def website():
 	page = {
-		'title':'Pages'
+		'title':'Website'
 	}
-	return render_template('admin/pages.html', page=page)
+	return render_template('admin/website.html', page=page)
 
 @mod.route('/logout', methods=['GET'])
 @login_required
