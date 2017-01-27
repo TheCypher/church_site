@@ -1,6 +1,8 @@
 from flask import Blueprint, request, render_template, flash, g, session, redirect, url_for
 
 from .decorators import *
+from .forms import *
+
 mod = Blueprint('admin', __name__, url_prefix='/admin')
 
 @mod.before_request
@@ -38,4 +40,14 @@ def edit_page():
 	page = {
 		'title':'Edit - %s' % (pageName)
 	}
+
+	form = {
+		'headerText': {'fieldName':'Big header', 'type':'text'},
+		'topText': {'fieldName':'Top text', 'type':'text'},
+		'bottomText': {'fieldName':'Bottom text', 'type':'text'},
+		'HeaderBg': {'fieldname':'Header Background', 'type':'file'}
+	}
+
+	htmlForms = generateForms(**form)
+
 	return render_template('admin/edit-page.html', page=page)
