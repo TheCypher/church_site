@@ -10,6 +10,9 @@
             <div class="card-content">
                 <form>
                     <div class="row">
+						{% for forms in forms %}
+							{{ forms }}
+						{% endfor %}
                         <div class="col-md-5">
 							<div class="form-group label-floating">
 								<label class="control-label">Company (disabled)</label>

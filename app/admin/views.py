@@ -41,13 +41,14 @@ def edit_page():
 		'title':'Edit - %s' % (pageName)
 	}
 
-	form = {
-		'headerText': {'fieldName':'Big header', 'type':'text'},
-		'topText': {'fieldName':'Top text', 'type':'text'},
-		'bottomText': {'fieldName':'Bottom text', 'type':'text'},
-		'HeaderBg': {'fieldname':'Header Background', 'type':'file'}
-	}
+	form = [
+		{'name':'big_header', 'type':'text', 'class':'form-control', 'label':'header'},
+		{'name':'top_text', 'type':'text', 'class':'form-control', 'label':'top'},
+		{'name':'bottom_text', 'type':'text', 'class':'form-control', 'label':'bottom'},
+		{'name':'bg_header', 'type':'text', 'class':'form-control', 'label':'Background Image'}
+	]
 
-	htmlForms = generateForms(**form)
+	htmlForms = generateForms(form)
+	print(htmlForms[0])
 
-	return render_template('admin/edit-page.html', page=page)
+	return render_template('admin/edit-page.html', page=page, forms=htmlForms[0])
